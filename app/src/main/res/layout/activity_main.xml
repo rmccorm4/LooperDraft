@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation ="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.looperdraft.MainActivity">
+
+    <Button
+        android:text="record"
+        android:layout_width="match_parent"
+        android:id="@+id/recordBtn"
+        android:layout_height="250dp"
+        android:background="@drawable/button_border"
+        android:textSize="30sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="buttonClicked (MainActivity)"
+        android:visibility="visible" />
+
+    <Button
+        android:text="stop"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/stopBtn"
+        android:layout_width="150dp"
+        android:background="@drawable/button_border"
+        android:textSize="30sp"
+        android:onClick="buttonClicked (MainActivity)"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/recordBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/layout_border"
+        android:padding="5dp">
+
+        <TextView
+            android:text="Modes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdModeBtn"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/linearLayout"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:text="RD"
+            android:textOff="RD"
+            android:textOn="RD"
+            android:checked="true"
+            android:textSize="20sp"
+            android:layout_margin="0dp"
+            android:padding="20dp" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rpModeBtn"
+            android:textOff="RP"
+            android:textOn="RP"
+            android:checked="false"
+            android:textSize="20sp"
+            android:padding="20dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@android:drawable/ic_notification_overlay"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/recordLight" />
+
+
+</RelativeLayout>
