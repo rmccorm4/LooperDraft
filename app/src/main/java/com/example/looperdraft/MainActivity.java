@@ -133,6 +133,7 @@ public class MainActivity extends AppCompatActivity
 
         if(audioFiles.contains(outFile.toString()))
         {
+            //need this to play every recorded track simultaneously
             playRecording();
         }
 
